@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu and Full-Width Banner</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Navbar styling */
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            position: absolute;
+            width: 100%;
+            background-color: rgba(0, 0, 0, 0.5); /* Slight transparency */
+            z-index: 1;
+            box-sizing: border-box;
+        }
+
+        .navbar .logo {
+            margin-left: 20px;
+        }
+
+        .navbar img {
+            width: 100px;
+            height: auto;
+        }
+
+        .navbar ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap; /* Allow the menu to wrap if necessary */
+            max-width: 70%; /* Limit the width to avoid overflow */
+            justify-content: flex-end;
+        }
+
+        .navbar ul li {
+            display: inline;
+        }
+
+        .navbar ul li a {
+            text-decoration: none;
+            color: white;
+            font-size: 16px;
+            font-weight: bold;
+            transition: color 0.3s ease;
+            white-space: nowrap; /* Prevents text wrapping inside the menu items */
+        }
+
+        .navbar ul li a:hover {
+            color: lightblue;
+        }
+
+        /* Banner Section */
+        .banner {
+            background-image: url('./website2.png'); 
+            background-size: cover; /* Cover entire viewport */
+            background-position: center; /* Center the image */
+            background-repeat: no-repeat; /* Prevent repeating */
+            width: 100%; /* Full width */
+            height: 100vh; /* Full height of viewport */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+        }
+
+        .banner h1 {
+            font-size: 4em;
+            margin: 0;
+        }
+
+        /* Responsive Design */
+        @media screen and (max-width: 768px) {
+            .navbar ul {
+                flex-direction: column; /* Stack the menu items vertically on smaller screens */
+                align-items: flex-end;
+            }
+
+            .navbar ul li a {
+                font-size: 14px; /* Reduce font size on smaller screens */
+            }
+
+            .banner h1 {
+                font-size: 2.5em; /* Smaller font size on mobile */
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <div class="navbar">
+        <div class="logo">
+            <img src="./AXIS_Portable_Air_Horizontal_Logo_Brandsmith-1.png" alt="Logo"> <!-- Replace with your logo image -->
+        </div>
+        <ul>
+            <li><a href="#">Equipment</a></li>
+            <li><a href="#">Who we are</a></li>
+            <li><a href="#">Careers</a></li>
+            <li><a href="#">Locations</a></li>
+            <li><a href="#">Bekind.Org</a></li>
+        </ul>
+    </div>
+
+    <!-- Banner Section -->
+    <div class="banner">
+        <!-- <h1>Welcome to Our Site</h1> -->
+    </div>
+
+    <script>
+        window.intercomSettings = {
+          api_base: "https://api-iam.intercom.io",
+          app_id: "e43s5geg",
+        };
+      </script>
+      
+      
+      <script>
+        // We pre-filled your app ID in the widget URL: 'https://widget.intercom.io/widget/e43s5geg'
+        (function(){var w=window;var ic=w.Intercom;if(typeof ic==="function"){ic('reattach_activator');ic('update',w.intercomSettings);}else{var d=document;var i=function(){i.c(arguments);};i.q=[];i.c=function(args){i.q.push(args);};w.Intercom=i;var l=function(){var s=d.createElement('script');s.type='text/javascript';s.async=true;s.src='https://widget.intercom.io/widget/e43s5geg';var x=d.getElementsByTagName('script')[0];x.parentNode.insertBefore(s,x);};if(document.readyState==='complete'){l();}else if(w.attachEvent){w.attachEvent('onload',l);}else{w.addEventListener('load',l,false);}}})();
+      </script>
+</body>
+</html>
